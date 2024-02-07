@@ -55,5 +55,12 @@ namespace ProyectoGraficaP2
         {
             objRosa.initializer(txtTamanio, txtNPetalos, picCanvas);
         }
+
+        private void btnGraficarA_Click(object sender, EventArgs e)
+        {
+            picCanvas.Refresh();
+            objRosa.ReadData(txtTamanio, txtNPetalos);
+            objRosa.DrawRosaAni(picCanvas);
+        }
     }
 }

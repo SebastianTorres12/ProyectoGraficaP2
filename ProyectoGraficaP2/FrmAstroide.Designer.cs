@@ -36,6 +36,7 @@
             this.grbAccionAstroide = new System.Windows.Forms.GroupBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnResetear = new System.Windows.Forms.Button();
+            this.btnGraficarAni = new System.Windows.Forms.Button();
             this.btnGraficar = new System.Windows.Forms.Button();
             this.grbDatosAstroide.SuspendLayout();
             this.grbCanvas.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             this.txtTamanio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTamanio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtTamanio.Location = new System.Drawing.Point(88, 47);
+            this.txtTamanio.Location = new System.Drawing.Point(86, 76);
             this.txtTamanio.Name = "txtTamanio";
             this.txtTamanio.Size = new System.Drawing.Size(100, 26);
             this.txtTamanio.TabIndex = 1;
@@ -68,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(8, 47);
+            this.label1.Location = new System.Drawing.Point(6, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 23);
             this.label1.TabIndex = 0;
@@ -95,9 +96,10 @@
             // 
             // grbAccionAstroide
             // 
+            this.grbAccionAstroide.Controls.Add(this.btnGraficar);
             this.grbAccionAstroide.Controls.Add(this.btnRegresar);
             this.grbAccionAstroide.Controls.Add(this.btnResetear);
-            this.grbAccionAstroide.Controls.Add(this.btnGraficar);
+            this.grbAccionAstroide.Controls.Add(this.btnGraficarAni);
             this.grbAccionAstroide.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbAccionAstroide.Location = new System.Drawing.Point(12, 177);
             this.grbAccionAstroide.Name = "grbAccionAstroide";
@@ -110,9 +112,9 @@
             // 
             this.btnRegresar.BackColor = System.Drawing.Color.Crimson;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegresar.Location = new System.Drawing.Point(44, 227);
+            this.btnRegresar.Location = new System.Drawing.Point(23, 290);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(113, 41);
+            this.btnRegresar.Size = new System.Drawing.Size(157, 47);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -122,25 +124,37 @@
             // 
             this.btnResetear.BackColor = System.Drawing.Color.Blue;
             this.btnResetear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnResetear.Location = new System.Drawing.Point(44, 138);
+            this.btnResetear.Location = new System.Drawing.Point(23, 208);
             this.btnResetear.Name = "btnResetear";
-            this.btnResetear.Size = new System.Drawing.Size(113, 44);
+            this.btnResetear.Size = new System.Drawing.Size(157, 50);
             this.btnResetear.TabIndex = 1;
             this.btnResetear.Text = "Resetear";
             this.btnResetear.UseVisualStyleBackColor = false;
             this.btnResetear.Click += new System.EventHandler(this.btnResetear_Click);
             // 
+            // btnGraficarAni
+            // 
+            this.btnGraficarAni.BackColor = System.Drawing.Color.Blue;
+            this.btnGraficarAni.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGraficarAni.Location = new System.Drawing.Point(23, 53);
+            this.btnGraficarAni.Name = "btnGraficarAni";
+            this.btnGraficarAni.Size = new System.Drawing.Size(157, 47);
+            this.btnGraficarAni.TabIndex = 0;
+            this.btnGraficarAni.Text = "Graficar Animado";
+            this.btnGraficarAni.UseVisualStyleBackColor = false;
+            this.btnGraficarAni.Click += new System.EventHandler(this.btnGraficar_Click);
+            // 
             // btnGraficar
             // 
             this.btnGraficar.BackColor = System.Drawing.Color.Blue;
-            this.btnGraficar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGraficar.Location = new System.Drawing.Point(44, 60);
+            this.btnGraficar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGraficar.Location = new System.Drawing.Point(23, 126);
             this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(113, 41);
-            this.btnGraficar.TabIndex = 0;
+            this.btnGraficar.Size = new System.Drawing.Size(157, 47);
+            this.btnGraficar.TabIndex = 3;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = false;
-            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click_1);
             // 
             // FrmAstroide
             // 
@@ -173,7 +187,8 @@
         private System.Windows.Forms.GroupBox grbAccionAstroide;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnResetear;
-        private System.Windows.Forms.Button btnGraficar;
+        private System.Windows.Forms.Button btnGraficarAni;
         private System.Windows.Forms.PictureBox picCanvas;
+        private System.Windows.Forms.Button btnGraficar;
     }
 }

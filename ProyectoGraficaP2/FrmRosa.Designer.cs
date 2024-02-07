@@ -39,6 +39,7 @@
             this.btnGraficar = new System.Windows.Forms.Button();
             this.grbCanvas = new System.Windows.Forms.GroupBox();
             this.picCanvas = new System.Windows.Forms.PictureBox();
+            this.btnGraficarA = new System.Windows.Forms.Button();
             this.grbDatosRosa.SuspendLayout();
             this.grbAccionRosa.SuspendLayout();
             this.grbCanvas.SuspendLayout();
@@ -98,12 +99,13 @@
             // 
             // grbAccionRosa
             // 
+            this.grbAccionRosa.Controls.Add(this.btnGraficarA);
             this.grbAccionRosa.Controls.Add(this.btnRegresar);
             this.grbAccionRosa.Controls.Add(this.btnResetear);
             this.grbAccionRosa.Controls.Add(this.btnGraficar);
             this.grbAccionRosa.Location = new System.Drawing.Point(14, 157);
             this.grbAccionRosa.Name = "grbAccionRosa";
-            this.grbAccionRosa.Size = new System.Drawing.Size(282, 281);
+            this.grbAccionRosa.Size = new System.Drawing.Size(282, 326);
             this.grbAccionRosa.TabIndex = 1;
             this.grbAccionRosa.TabStop = false;
             this.grbAccionRosa.Enter += new System.EventHandler(this.grbAccionRosa_Enter);
@@ -113,9 +115,9 @@
             this.btnRegresar.BackColor = System.Drawing.Color.Crimson;
             this.btnRegresar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRegresar.Location = new System.Drawing.Point(68, 208);
+            this.btnRegresar.Location = new System.Drawing.Point(56, 253);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(148, 39);
+            this.btnRegresar.Size = new System.Drawing.Size(174, 39);
             this.btnRegresar.TabIndex = 2;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
@@ -126,9 +128,9 @@
             this.btnResetear.BackColor = System.Drawing.Color.Blue;
             this.btnResetear.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResetear.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnResetear.Location = new System.Drawing.Point(68, 132);
+            this.btnResetear.Location = new System.Drawing.Point(56, 186);
             this.btnResetear.Name = "btnResetear";
-            this.btnResetear.Size = new System.Drawing.Size(148, 39);
+            this.btnResetear.Size = new System.Drawing.Size(174, 39);
             this.btnResetear.TabIndex = 1;
             this.btnResetear.Text = "Resetear";
             this.btnResetear.UseVisualStyleBackColor = false;
@@ -139,9 +141,9 @@
             this.btnGraficar.BackColor = System.Drawing.Color.Blue;
             this.btnGraficar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnGraficar.Location = new System.Drawing.Point(68, 50);
+            this.btnGraficar.Location = new System.Drawing.Point(56, 114);
             this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(148, 39);
+            this.btnGraficar.Size = new System.Drawing.Size(174, 39);
             this.btnGraficar.TabIndex = 0;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = false;
@@ -152,7 +154,7 @@
             this.grbCanvas.Controls.Add(this.picCanvas);
             this.grbCanvas.Location = new System.Drawing.Point(302, 9);
             this.grbCanvas.Name = "grbCanvas";
-            this.grbCanvas.Size = new System.Drawing.Size(577, 436);
+            this.grbCanvas.Size = new System.Drawing.Size(671, 480);
             this.grbCanvas.TabIndex = 2;
             this.grbCanvas.TabStop = false;
             // 
@@ -160,16 +162,29 @@
             // 
             this.picCanvas.Location = new System.Drawing.Point(7, 19);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(564, 410);
+            this.picCanvas.Size = new System.Drawing.Size(658, 455);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
+            // 
+            // btnGraficarA
+            // 
+            this.btnGraficarA.BackColor = System.Drawing.Color.Blue;
+            this.btnGraficarA.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGraficarA.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGraficarA.Location = new System.Drawing.Point(56, 40);
+            this.btnGraficarA.Name = "btnGraficarA";
+            this.btnGraficarA.Size = new System.Drawing.Size(174, 43);
+            this.btnGraficarA.TabIndex = 3;
+            this.btnGraficarA.Text = "Graficar Animado";
+            this.btnGraficarA.UseVisualStyleBackColor = false;
+            this.btnGraficarA.Click += new System.EventHandler(this.btnGraficarA_Click);
             // 
             // frmRosa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(882, 450);
+            this.ClientSize = new System.Drawing.Size(975, 510);
             this.Controls.Add(this.grbCanvas);
             this.Controls.Add(this.grbAccionRosa);
             this.Controls.Add(this.grbDatosRosa);
@@ -199,6 +214,7 @@
         private System.Windows.Forms.Button btnResetear;
         private System.Windows.Forms.Button btnGraficar;
         private System.Windows.Forms.PictureBox picCanvas;
+        private System.Windows.Forms.Button btnGraficarA;
     }
 }
 

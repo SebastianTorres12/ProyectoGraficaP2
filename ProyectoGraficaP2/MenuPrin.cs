@@ -51,12 +51,16 @@ namespace ProyectoGraficaP2
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            FrmHipocicloide hipocicloide = new FrmHipocicloide();
+            this.Hide();
+            hipocicloide.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            FrmCicloide cicloide = new FrmCicloide();
+            this.Hide();
+            cicloide.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)

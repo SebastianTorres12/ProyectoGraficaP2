@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAstroide.cs" />
+    <Compile Include="CCicloide.cs" />
     <Compile Include="CEpicicloide.cs" />
+    <Compile Include="CHipocicloide.cs" />
     <Compile Include="CMariposa.cs" />
     <Compile Include="FrmAstroide.cs">
       <SubType>Form</SubType>
@@ -55,11 +57,23 @@
     <Compile Include="FrmAstroide.Designer.cs">
       <DependentUpon>FrmAstroide.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCicloide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCicloide.Designer.cs">
+      <DependentUpon>FrmCicloide.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEpicicloide.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEpicicloide.Designer.cs">
       <DependentUpon>FrmEpicicloide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHipocicloide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHipocicloide.Designer.cs">
+      <DependentUpon>FrmHipocicloide.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMariposa.cs">
       <SubType>Form</SubType>
@@ -85,8 +99,14 @@
     <EmbeddedResource Include="FrmAstroide.resx">
       <DependentUpon>FrmAstroide.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCicloide.resx">
+      <DependentUpon>FrmCicloide.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEpicicloide.resx">
       <DependentUpon>FrmEpicicloide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHipocicloide.resx">
+      <DependentUpon>FrmHipocicloide.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMariposa.resx">
       <DependentUpon>FrmMariposa.cs</DependentUpon>

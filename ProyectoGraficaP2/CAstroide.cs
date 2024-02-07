@@ -17,6 +17,7 @@ namespace ProyectoGraficaP2
         private Pen mPen, pPen, cPen;
         PointF center;
         private float tamanio;
+        private List<Point> asteroidPoints = new List<Point>();
         private const float SF = 5;
 
         public void initializer(TextBox txtTamanio, PictureBox picCanvas)
@@ -42,14 +43,21 @@ namespace ProyectoGraficaP2
             }
         }
 
+        public void DrawAstroideAndAxesAni(PictureBox picCanvas)
+        {
+            calculateCenter(picCanvas);
+            DrawAxes();  // Dibujar ejes
+            DrawAstroideA();  // Dibujar astroide
+        }
+
         public void DrawAstroideAndAxes(PictureBox picCanvas)
         {
             calculateCenter(picCanvas);
             DrawAxes();  // Dibujar ejes
-            DrawAstroide();  // Dibujar astroide
+            DrawAndStoreAstroide();  // Dibujar astroide
         }
 
-        private void DrawAstroide()
+        private void DrawAstroideA()
         {
             // Definir el parámetro 't'
             double dt = 0.01;
@@ -70,6 +78,41 @@ namespace ProyectoGraficaP2
             // Dibujar el círculo que contiene la astroide
             mGraph.DrawEllipse(cPen, center.X - tamanio, center.Y - tamanio, 2 * tamanio, 2 * tamanio);
         }
+
+        
+        private void DrawAndStoreAstroide()
+        {
+            // Definir el parámetro 't'
+            double dt = 0.01;
+
+            List<Point> points = new List<Point>();
+
+            for (double t = 0; t <= 2 * Math.PI; t += dt)
+            {
+                double x = tamanio * Math.Pow(Math.Cos(t), 3);
+                double y = tamanio * Math.Pow(Math.Sin(t), 3);
+
+                // Escalar y trasladar para que el astroide se ajuste al PictureBox
+                int scaledX = (int)(x + center.X);
+                int scaledY = (int)(y + center.Y);
+
+                // Agregar el punto a la lista
+                asteroidPoints.Add(new Point(scaledX, scaledY));
+
+                // Agregar el punto a la lista para DrawLines
+                points.Add(new Point(scaledX, scaledY));
+            }
+
+            // Dibujar el círculo que contiene la astroide
+            mGraph.DrawEllipse(cPen, center.X - tamanio, center.Y - tamanio, 2 * tamanio, 2 * tamanio);
+
+            // Dibujar la astroide con DrawLines
+            if (points.Count >= 2)
+            {
+                mGraph.DrawLines(mPen, points.ToArray());
+            }
+        }
+
 
         private void DrawAxes()
         {       

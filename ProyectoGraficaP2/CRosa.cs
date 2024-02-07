@@ -84,5 +84,32 @@ namespace ProyectoGraficaP2
             // Dibujar la rosa de cuatro pétalos
             mGraph.DrawLines(mPen, points);
         }
+
+        public void DrawRosaAni(PictureBox picCanvas)
+        {
+            calculateCenter(picCanvas);
+
+            // Dibujar el eje x
+            mGraph.DrawLine(pPen, 0, center.Y, picCanvas.Width, center.Y);
+
+            // Dibujar el eje y
+            mGraph.DrawLine(pPen, center.X, 0, center.X, picCanvas.Height);
+
+            // Calcular y dibujar los puntos de la rosa de cuatro pétalos
+            for (double t = 0; t < 360; t+=0.1)
+            {
+                double angle = Math.PI * t / 180.0;
+                int x = (int)(tamanio * Math.Cos(npetalos * angle) * Math.Cos(angle));
+                int y = (int)(tamanio * Math.Cos(npetalos * angle) * Math.Sin(angle));
+
+                // Ajustar el origen al centro del PictureBox
+                x += (int)center.X;
+                y += (int)center.Y;
+
+                // Dibujar el punto como un círculo
+                mGraph.FillEllipse(Brushes.Indigo, x - 2, y - 2, 4, 4);
+            }
+        }
+
     }
 }

@@ -21,7 +21,7 @@ namespace ProyectoGraficaP2
         {
             picCanvas.Refresh();
             objAstroide.ReadData(txtTamanio);
-            objAstroide.DrawAstroideAndAxes(picCanvas);
+            objAstroide.DrawAstroideAndAxesAni(picCanvas);
         }
 
         private void btnResetear_Click(object sender, EventArgs e)
@@ -44,6 +44,13 @@ namespace ProyectoGraficaP2
         private void grbAccionAstroide_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGraficar_Click_1(object sender, EventArgs e)
+        {
+            picCanvas.Refresh();
+            objAstroide.ReadData(txtTamanio);
+            objAstroide.DrawAstroideAndAxes(picCanvas);
         }
     }
 }

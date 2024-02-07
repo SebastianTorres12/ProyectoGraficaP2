@@ -69,7 +69,7 @@ namespace ProyectoGraficaP2
 
             double k = rMayor / rMenor;
 
-            for (double alpha = 0.001; alpha <= vueltas * Math.PI; alpha += 0.001) // Ajusta el límite superior para completar múltiples vueltas
+            for (double alpha = 0.01; alpha <= vueltas * Math.PI; alpha += 0.01) // Ajusta el límite superior para completar múltiples vueltas
             {
                 double y = (rMayor + rMenor) * Math.Sin(alpha) - rMenor * Math.Sin((1 + k) * alpha);
                 double x = (rMayor + rMenor) * Math.Cos(alpha) - rMenor * Math.Cos((1 + k) * alpha);
